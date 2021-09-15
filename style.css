@@ -12,11 +12,15 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
+/* Styling Variables */
 :root {
   --accent-color: #555;
   --body-typeface: "Rubik", sans-serif;
   --main-heading: "Staatliches", cursive;
+  --gradient: linear-gradient(45deg,#F17C58, #E94584, #24AADB , #27DBB1,#FFDC18, #FF3706);
 }
+
 
 body {
   font-family: var(--body-typeface);
@@ -37,9 +41,13 @@ img {
 /* Typography */
 
 h1 {
-  font-size: 3em;
+  font-size: 6em;
   font-family: var(--main-heading);
   margin-bottom: .2em;
+}
+
+.hero-headline {
+color: white;
 }
 
 /* Hyperlink Styles */
@@ -65,13 +73,17 @@ p {margin-bottom: 1em;}
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: rgb(238, 174, 202);
-  background: radial-gradient(
-    circle,
-    rgba(238, 174, 202, 1) 0%,
-    rgba(148, 187, 233, 1) 100%
-  );
+  background-size: 600%;
+  background-image: var(--gradient);
+  animation: bg-animation 120s infinite alternate;
 }
+
+@keyframes bg-animation {
+  0% {background-position: 0%;}
+  100% {background-position: 100%;}
+}
+
+
 .hero-headline-wrapper {
   display: flex;
   flex: 1;
@@ -80,6 +92,4 @@ p {margin-bottom: 1em;}
   padding: 4em 8em;
   text-align: center;
 }
-.hero-headline {
-  font-size: 3em;
-}
+
