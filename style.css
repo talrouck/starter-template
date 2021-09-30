@@ -1,6 +1,6 @@
 /* Typography imported from Google Fonts */
-@import url("https://fonts.googleapis.com/css?family=Hepta+Slab|Staatliches&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap");
 
 html {
@@ -18,9 +18,9 @@ html {
 /* Styling Variables */
 :root {
   --accent-color: #555;
-  --body-typeface: "Rubik", sans-serif;
-  --main-heading: "Staatliches", cursive;
-  --gradient: linear-gradient(45deg, #F17C58, #E94584, #24AADB, #27DBB1, #FFDC18, #FF3706);
+  --body-typeface: "Work Sans", sans-serif;
+  --main-heading: 'Space Mono', monospace;
+  --gradient: linear-gradient(45deg, #EEFC57, #5E5B52, #DF9A57, #FC7A57, #FCD757, #5B8266);
 }
 
 
@@ -49,18 +49,35 @@ h1 {
   margin-bottom: .2em;
 }
 
+h2 {
+  font-size: 4em;
+  font-family: var(--main-heading);
+  margin-bottom: .2em;
+}
+h3 {
+  font-size: 2em;
+  font-family: var(--main-heading);
+  margin-bottom: .2em;
+}
+
+h4 {
+  font-size: 1.5em;
+  font-family: var(--main-heading);
+  margin-bottom: .2em;
+}
+
 .hero-headline {
-  color: white;
+  color: rgb(0, 214, 132);
 }
 
 /* Hyperlink Styles */
 a {
   text-decoration: none;
-  color: #444;
+  color: rgb(85, 85, 85);
 }
 
 a:hover {
-  color: #111;
+  color: rgb(0, 255, 157);
 }
 
 p {
@@ -84,18 +101,18 @@ p {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-  grid-gap: 1rem;
+  grid-gap: rem;
   /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width.  Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
 }
 
 
 .hero-footer {
-  color: white;
+  color: rgb(0, 214, 132);
 }
 
 .main-footer {
   min-height: 100vh;
-  background: #f5f5f5;
+  background: rgb(#0, 214, 1322);
 }
 
 .hero-footer,
@@ -103,7 +120,7 @@ p {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 1rem;
+  padding: rem;
   text-align: center;
 }
 
@@ -127,7 +144,7 @@ p {
 }
 
 .logo {
-  width: 3em;
+  width: 6em;
 }
 
 .hero-headline-wrapper {
@@ -156,8 +173,9 @@ p {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-size: 600%;
-  background-image: var(--gradient);
+  background-size: 100%;
+  background-image: url('https://lh3.googleusercontent.com/mo-K8rdkBOqXfwOek3vn1caHqobdIj0_Xi9u8K0XyyuGSW2nv4UfEWY5pCoZ1VWrxjg1zXqDBuYbAK2Pw1ogMOuXLAxdGxCe8pC1UHTfId6Kpa2eLC7uKrVeaCJNGT9M2oFKKfBG4w=w2400');
+  ;
   animation: bg-animation 120s infinite alternate;
 }
 
@@ -197,7 +215,7 @@ p {
 .project-wrapper {
   display: flex;
   justify-content: space-between;
-  background: black;
+  background: rgb(255, 255, 255);
   padding: 1em;
 }
 
@@ -207,8 +225,8 @@ p {
   position: -webkit-sticky;
   position: sticky;
   top: 5vh;
-  color: white;
-  background: orangered;
+  color: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
   padding: 1em;
 }
 
@@ -225,8 +243,6 @@ p {
   width: 60vw;
   min-height: 800vh;
   background-image: linear-gradient(-225deg,
-      #ff057c 0%,
-      #8d0b93 50%,
-      #321575 100%);
+      #ffffff 0%,
   padding: 1em;
 }
